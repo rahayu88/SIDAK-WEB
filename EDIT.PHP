@@ -247,7 +247,7 @@ table td {
 	    $no_hp = $_POST['no_hp'];
       	$email = $_POST['email'];
       	$no_rekening = $_POST['no_rekening'];
-        $rubah = mysqli_query($conn, "UPDATE post SET nama_lengkap = '$nama',no_ktp = '$no_ktp',alamat = '$alamat',jenis_kelamin = '$jenis_kelamin',no_hp = '$no_hp', email = '$email', no_rekening = '$no_rekening'");     
+        $rubah = mysqli_query($conn, "UPDATE karyawan SET nama_lengkap = '$nama',no_ktp = '$noktp', alamat = '$alamat',jenis_kelamin = '$jenis_kelamin',no_hp = '$no_hp', email = '$email', no_rekening = '$no_rekening' WHERE id_karyawan = '$_GET[id_karyawan]'");     
 
  		if($rubah){
 			?>
