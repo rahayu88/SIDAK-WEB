@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2019 at 05:58 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Sep 17, 2019 at 06:37 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -61,13 +59,6 @@ CREATE TABLE `karyawan` (
   `no_rekening` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `karyawan`
---
-
-INSERT INTO `karyawan` (`id_karyawan`, `nama_lengkap`, `no_ktp`, `alamat`, `jenis_kelamin`, `no_hp`, `email`, `no_rekening`) VALUES
-(4, 'huhuhu', 2147483647, 'gang dodol', 'lanang', 987654321, 'ryu@gmail.com', 2147483647);
-
 -- --------------------------------------------------------
 
 --
@@ -77,7 +68,7 @@ INSERT INTO `karyawan` (`id_karyawan`, `nama_lengkap`, `no_ktp`, `alamat`, `jeni
 CREATE TABLE `user` (
   `id_user` int(15) NOT NULL,
   `username` varchar(225) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -85,7 +76,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Indexes for dumped tables
@@ -124,26 +115,21 @@ ALTER TABLE `user`
 --
 ALTER TABLE `agama`
   MODIFY `id_agama` int(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
   MODIFY `id_jabatan` int(15) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
   MODIFY `id_karyawan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -2,7 +2,7 @@
    session_start();
    require_once("koneksi.php");
    $username = $_POST['username'];
-   $pass = $_POST['password'];   
+   $pass = md5($_POST['password']);   
    $sql = "SELECT * FROM user WHERE username = '$username'";
    $query = $db->query($sql);
    $hasil = $query->fetch_assoc();
