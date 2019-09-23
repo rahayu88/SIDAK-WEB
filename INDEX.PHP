@@ -7,7 +7,7 @@
 
 
     <script>
-    alert("selamat datang di website kami")
+    //alert("selamat datang di website kami")
     </script>
     
 </head>
@@ -41,7 +41,6 @@ input[type="text"],input[type="password"]{
  border-bottom: 1px solid #999;
  margin-bottom: 15px;
  color: #999;
- width: 100%;
  padding: 15px 0px;
  background: none;
 
@@ -191,33 +190,26 @@ table td {
   background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
   background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
 }
- 
-
 </style>
 
 <body>
-
-
 	<div id="kiri">		
 		<div class="menu">
 			<img src="logo.png">
-		
 		</div>
-		
 	</div>
 	<div id="kanan">
 		<div class="header">
          	<a id="empat" href="logout.php" class="fas fa-sign-out-alt"> Logout</a>	
-		
-			
+		</div>
+		<div style="padding-top:100px;padding-right:100px;float:right;display:inline-block">
+			<form id="cari"><input name="filter" type="text" placeholder="Cari disini" <?php if(isset($_GET['filter'])){ echo "value='$_GET[filter]'"; }?> onChange="submit()"></form>
 		</div>
 		<div id="section">
+		
 			<br>
-			<h2>DATA KARYAWAN</h2><br><br>
-			<table align="center"><br>
-				<a class="add" style="background-color: #27ae60;color: white;border-radius:3px;margin-left: -940px;padding: 12px; " href="forminput.php">Tambah Data</a><br><br>
- 
-				
+			<h2>DATA KARYAWAN</h2><br><br><a class="add" style="background-color: #27ae60;color: white;border-radius:3px;margin-left: -750px;padding: 12px; " href="forminput.php">Tambah Data</a><br><br>
+			<table align="center">
 				<tr style="text-align: center;">
 					<td><b>No</b></td>
 					<td><b>Nama Lengkap</b></td>
@@ -234,6 +226,9 @@ table td {
 				include 'connect.php';
 				$no = 1;
 				$select = mysqli_query($conn, "SELECT * FROM karyawan");
+				if(isset($_GET['filter'])){
+					$select = mysqli_query($conn, "SELECT * FROM karyawan WHERE (nama_lengkap LIKE '%$_GET[filter]%' OR no_ktp LIKE '%$_GET[filter]%')");
+				}
 				while($hasil = mysqli_fetch_array($select)){
 				?>
 
@@ -261,3 +256,8 @@ table td {
 	
 </body>
 </html>
+<script>
+function submit() {
+  document.getElementById("cari").submit();
+}
+</script>
