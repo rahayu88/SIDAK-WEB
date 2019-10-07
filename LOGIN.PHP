@@ -4,6 +4,7 @@
         header('location:index.php'); }
 
         require_once("koneksi.php");
+
         if(isset($_GET['logout'])){
           echo '<script>alert("Berhasil Logout.....!!!")</script>';
         }
@@ -29,7 +30,7 @@ body{
  background: #2e3339;
  margin-right: 20%;
  margin-left: 20%;
-
+ 
 
 }
 
