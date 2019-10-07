@@ -2,7 +2,14 @@
         session_start();
         if(isset($_SESSION['username'])) {
         header('location:index.php'); }
+
         require_once("koneksi.php");
+        if(isset($_GET['logout'])){
+          echo '<script>alert("Berhasil Logout.....!!!")</script>';
+        }
+        if(isset($_GET['login'])){
+          echo '<script>alert("Silahkan Login terlebih dahulu.....!!!")</script>';
+        }
         ?>
 
 <!DOCTYPE html>
@@ -12,9 +19,7 @@
   <link rel="shortcut icon" type="icon" href="back 1.jpg">
 
 
-    <script>
-    alert("Berhasil Logout.....!!!")
-    </script>
+    
     
 
 	</head>
