@@ -205,7 +205,7 @@ table td {
   background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
   background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
 }
- 
+
 
 </style>
 
@@ -225,15 +225,22 @@ table td {
 
 	<form action="" method="post">
 		<table>
-			
-		<input style="width: 700px; background: white;color: black;" type="text" name="nama_lengkap"  value="<?php echo $data['nama_lengkap'] ?>">
-		<input style="width: 700px;height: 40px;" type="number" name="no_ktp" value="<?php echo $data['no_ktp'] ?>">
-		<input style="width: 700px;background: white;margin-top: 16px;color: black;" type="text" name="alamat" value="<?php echo $data['alamat'] ?>">
-		<input style="width: 700px;background: white;color: black;" type="text" name="jenis_kelamin" value="<?php echo $data['jenis_kelamin'] ?>">
-		<input style="width: 700px; background: white;color: black;" type="text" name="no_hp"  value="<?php echo $data['no_hp'] ?>">
-		<input style="width: 700px;height: 40px;" type="email" name="email" value="<?php echo $data['email'] ?>">
-		<input style="width: 700px;background: white;margin-top: 16px;color: black;" type="number" name="no_rekening" value="<?php echo $data['no_rekening'] ?>">
-	    <input style="width: 700px;height: 40px;background: #2980b9;" type="submit" name="edit" value="Simpan">
+		Nama Lengkap :
+		<input style="width: 700px; background: white;color: black; margin-left:5px; padding-left: 1.8em " type="text" name="nama_lengkap"  value="<?php echo $data['nama_lengkap'] ?>">
+		<br>Nomor KTP :
+		<input style="width: 700px;height: 40px; margin-left:25px; padding-left: 1.8em " type="number" name="no_ktp" value="<?php echo $data['no_ktp'] ?>">
+		<br>Alamat :
+		<input style="width: 700px;background: white;margin-top: 16px;color: black; margin-left:55px; padding-left: 1.8em " type="text" name="alamat" value="<?php echo $data['alamat'] ?>">
+		<br>Jenis Kelamin :
+		<input style="width: 700px;background: white;color: black; margin-left:11px; padding-left: 1.8em " type="text" name="jenis_kelamin" value="<?php echo $data['jenis_kelamin'] ?>">
+		<br>Nomor HP :
+		<input style="width: 700px; background: white;color: black; margin-left:34px; padding-left: 1.8em " type="text" name="no_hp"  value="<?php echo $data['no_hp'] ?>">
+		<br>Email :
+		<input style="width: 700px;height: 40px; margin-left:68px; padding-left: 1.8em " type="email" name="email" value="<?php echo $data['email'] ?>">
+		<br>No Rekening :
+		<input style="width: 700px; height: 40px; background: white;margin-top: 16px;color: black; margin-left:25px; padding-left: 1.8em " type="number" name="no_rekening" value="<?php echo $data['no_rekening'] ?>">
+	    <br><br>
+		<input style="width: 700px;height: 40px;background: #2980b9; margin-left:122px; padding-left: 1.8em " type="submit" name="edit" value="Simpan">
 		</table>
 	</form>
 
@@ -247,18 +254,33 @@ table td {
 	    $no_hp = $_POST['no_hp'];
       	$email = $_POST['email'];
       	$no_rekening = $_POST['no_rekening'];
-        $rubah = mysqli_query($conn, "UPDATE karyawan SET nama_lengkap = '$nama',no_ktp = '$noktp', alamat = '$alamat',jenis_kelamin = '$jenis_kelamin',no_hp = '$no_hp', email = '$email', no_rekening = '$no_rekening' WHERE id_karyawan = '$_GET[id_karyawan]'");     
+        if(!empty(trim($nama))){
+			if(!empty(trim($noktp))){
+				if(!empty(trim($alamat))){
+					if(!empty(trim($jenis_kelamin))){
+						if(!empty(trim($no_hp))){
+							if(!empty(trim($email))){
+								if(!empty(trim($no_rekening))){
+									//
+									$rubah = mysqli_query($conn, "UPDATE karyawan SET nama_lengkap = '$nama',no_ktp = '$noktp', alamat = '$alamat',jenis_kelamin = '$jenis_kelamin',no_hp = '$no_hp', email = '$email', no_rekening = '$no_rekening' WHERE id_karyawan = '$_GET[id_karyawan]'");     
+									if($rubah){
+										?>
+										<script type="text/javascript">
+											alert('Data Berhasil Terubah')
+											document.location.href = "index.php";
+										</script>
+										<?php
+									}else{
+										echo 'Data Gagal Terubah';
+									}
 
- 		if($rubah){
-			?>
-			<script type="text/javascript">
-				alert('Data Berhasil Terubah')
-				document.location.href = "index.php";
-			</script>
-			<?php
-		}else{
-			echo 'Data Gagal Terubah';
-		}
+								}else{ echo "<script>alert('Masukan Nomor Rekening')</script>";}
+							}else{ echo "<script>alert('Masukan Email')</script>";}
+						}else{ echo "<script>alert('Masukan Nomor HP')</script>";}
+					}else{ echo "<script>alert('Masukan Jenis Kelamin')</script>";}
+				}else{ echo "<script>alert('Masukan Alamat')</script>";}
+			}else{ echo "<script>alert('Masukan Nomor KTP')</script>";}
+		}else{ echo "<script>alert('Masukan Nama')</script>";}
 	}
 	?>
 	

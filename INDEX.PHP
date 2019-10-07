@@ -202,13 +202,16 @@ table td {
 		<div class="header">
          	<a id="empat" href="logout.php" class="fas fa-sign-out-alt"> Logout</a>	
 		</div>
-		<div style="padding-top:100px;padding-right:100px;float:right;display:inline-block">
-			<form id="cari"><input name="filter" type="text" placeholder="Cari disini" <?php if(isset($_GET['filter'])){ echo "value='$_GET[filter]'"; }?> onChange="submit()"></form>
+		<div style="padding-top:135px;padding-right:90px;float:right;display:inline-block">
+			
+		Search :
+		<form style="width: 200px; margin-left:75px; margin-top:-30px; height:40px; background: white; color: black; padding-left: 1.3em" id="cari"><input name="filter" type="text" placeholder="Cari Data Disini" <?php if(isset($_GET['filter'])){ echo "value='$_GET[filter]'"; }?> onChange="submit()"></form>
 		</div>
 		<div id="section">
 		
 			<br>
-			<h2>DATA KARYAWAN</h2><br><br><a class="add" style="background-color: #27ae60;color: white;border-radius:3px;margin-left: -750px;padding: 12px; " href="forminput.php">Tambah Data</a><br><br>
+			<h2 style="margin-left:300px;">DATA KARYAWAN</h2><br><br>
+			<a class="add" style="background-color: #27ae60;color: white;border-radius:3px;margin-left:-500px;padding: 12px; " href="forminput.php">Tambah Data</a><br><br>
 			<table align="center">
 				<tr style="text-align: center;">
 					<td><b>No</b></td>

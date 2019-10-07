@@ -218,13 +218,13 @@ table td {
 		<table>
 			<a href="index.php" style="background-color: #27ae60;color: #fff;border-radius: 3px;padding: 12px;text-decoration: none;margin-left: -615px;">Data Karyawan</a><br><br><br>
 		
-		<input style="width: 700px; background: white;color: black;" type="text" name="nama lengkap" placeholder="  Nama Lengkap" required>
-		<input style="width: 700px;height: 40px;" type="number" name="no ktp" placeholder="  No KTP" required></td>
-		<input style="width: 700px;background: white;margin-top: 16px;color: black;" type="text" name="alamat" placeholder="  Alamat" required></td>
-		<input style="width: 700px; background: white;color: black;" type="text" name="jenis kelamin" placeholder="  Jenis Kelamin" required>	
-		<input style="width: 700px;height: 40px;  background: white;color: black;" type="number" name="no hp" placeholder="  No HP" required>	
-		<input style="width: 700px;margin-top: 15px;background: white;color: black;" type="text" name="email" placeholder="  Email" required>
-		<input style="width: 700px;height: 40px ;margin-top: 20px;background: white;margin-top: 10px;color: black;" type="number" name="no rekening" placeholder="  No Rekening" required></td>
+		<input style="width: 700px; background: white;color: black;padding-left: 1.8em " type="text" name="nama lengkap" placeholder="  Nama Lengkap" required>
+		<input style="width: 700px;height: 40px;padding-left: 1.8em" type="number" name="no ktp" placeholder="  No KTP" required></td>
+		<input style="width: 700px;background: white;margin-top: 16px;color: black;padding-left: 1.8em" type="text" name="alamat" placeholder="  Alamat" required></td>
+		<input style="width: 700px; background: white;color: black;padding-left: 1.8em" type="text" name="jenis kelamin" placeholder="  Jenis Kelamin" required>	
+		<input style="width: 700px;height: 40px;  background: white;color: black;padding-left: 1.8em" type="number" name="no hp" placeholder="  No HP" required>	
+		<input style="width: 700px;margin-top: 15px;background: white;color: black;padding-left: 1.8em" type="text" name="email" placeholder="  Email" required>
+		<input style="width: 700px;height: 40px ;margin-top: 20px;background: white;margin-top: 10px;color: black;padding-left: 1.8em" type="number" name="no rekening" placeholder="  No Rekening" required></td>
 		<input style="width: 700px;height: 40px;margin-top: 20px;background: #2980b9;color: black;" type="submit" name="simpan" value="Simpan"></td>
 		</table>
 	</form>
