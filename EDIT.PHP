@@ -214,7 +214,7 @@ table td {
 		<div class="menu">
 			<img src="logo.png">
 		 </div>
-		<div class="menubawah"><li><a href="index.php">DATA KARYAWAN</a></li></div>
+		
 	</div>
 	<div id="kanan">
 		<div class="header">
