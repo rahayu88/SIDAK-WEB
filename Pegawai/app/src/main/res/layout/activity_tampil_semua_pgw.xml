@@ -1,7 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
@@ -9,9 +11,21 @@
 
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView" />
+        android:layout_height="match_parent"/>
+
+
+    <Button
+        android:id="@+id/keluar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="-70dp"
+        android:background="@color/birumuda"
+        android:text="Keluar"
+        android:textSize="18dp"
+        android:textColor="@color/putih"/>
+
 
 
 </LinearLayout>

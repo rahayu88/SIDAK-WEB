@@ -79,26 +79,26 @@ img{
 }
 
 #kiri{
-	background: ##2c3e50;
-	height: 710px;
+	background: #95a5a6;
+	height: 1000px;
 	width: 320px;
-	margin-left: -295px;
+	margin-left: -296px;
 	
 }
 #kanan{
 	background: #bdc3c7;
-	height: 1315px;
-	width: 1175px;
+	height: 1000px;
+	width: 1055px;
 	margin-left: 25px;
-	margin-top: -713px;
+	margin-top: -1003px;
 }
 
 .menu{
 	color: white;
-	background:#566892;
-	width: 317px;
-	height: 255px;
-	margin-top: -5px
+	background:#16a085;
+	width: 320px;
+	height: 270px;
+	margin-top: -10px
 }
 
 #menulagi li{
@@ -111,8 +111,8 @@ img{
 }
 
 .header{
-	background: #566892;
-	width: 1155px;
+	background: #2ecc71;
+	width: 1035px;
 	height: 25px;
 	color: white;
 	margin-top: 3px;
@@ -131,12 +131,12 @@ img{
 #empat{
 	color: white;
 	font-size: 18px;
-	margin-left: 50px;
+	margin-left: 920px;
 }
 
 
 #empat:hover{
-	color: red;
+	color: #f1c40f;
 }
 
 
@@ -225,6 +225,9 @@ table td {
 
 	<form action="" method="post">
 		<table>
+		<a id="datakry" href="index.php" style="background-color: #27ae60;color: #fff;border-radius: 3px;padding: 12px;text-decoration: none;margin-left: -725px;">Data Karyawan</a><br><br><br>
+		
+
 		Nama Lengkap :
 		<input style="width: 700px; background: white;color: black; margin-left:5px; padding-left: 1.8em " type="text" name="nama_lengkap"  value="<?php echo $data['nama_lengkap'] ?>">
 		<br>Nomor KTP :
@@ -240,7 +243,7 @@ table td {
 		<br>No Rekening :
 		<input style="width: 700px; height: 40px; background: white;margin-top: 16px;color: black; margin-left:25px; padding-left: 1.8em " type="number" name="no_rekening" value="<?php echo $data['no_rekening'] ?>">
 	    <br><br>
-		<input style="width: 700px;height: 40px;background: #2980b9; margin-left:122px; padding-left: 1.8em " type="submit" name="edit" value="Simpan">
+		<input style="width: 725px;height: 40px;background: #2ecc71; margin-left:122px; padding-left: 1.8em " type="submit" name="edit" value="Simpan">
 		</table>
 	</form>
 

@@ -1,19 +1,37 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-android:layout_height="match_parent" android:paddingLeft="16dp"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="16dp"
 android:paddingRight="16dp"
 android:paddingTop="16dp"
-android:paddingBottom="16dp" tools:context=".MainActivity">
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+android:paddingBottom="16dp"
+tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="345dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FORM KARYAWAN"
+            android:textColor="@color/hitam"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Pegawai" />
+        android:text="Nama Lengkap :"
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -23,7 +41,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nomor KTP" />
+        android:text="Nomor KTP :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -33,7 +51,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jenis Kelamin" />
+        android:text="Jenis Kelamin :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -42,7 +60,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nomor HP" />
+        android:text="Nomor HP :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -51,7 +69,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email" />
+        android:text="Email :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -60,7 +78,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nomor Rekening" />
+        android:text="Nomor Rekening :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -69,7 +87,7 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alamat" />
+        android:text="Alamat :" />
 
     <EditText
         android:layout_width="match_parent"
@@ -78,14 +96,23 @@ android:paddingBottom="16dp" tools:context=".MainActivity">
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tambah Pegawai"
-        android:id="@+id/buttonAdd" />
+        android:layout_height="40dp"
+        android:text="Tambah Karyawan"
+        android:id="@+id/buttonAdd"
+        android:background="@color/birumuda"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/putih"
+        android:textSize="15dp"/>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Daftar Pegawai"
-        android:id="@+id/buttonView" />
+        android:layout_height="40dp"
+        android:text="Data Karyawan"
+        android:id="@+id/buttonView"
+        android:background="@color/birumuda"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/putih"
+        android:textSize="15dp"/>
+
 </LinearLayout>
 </ScrollView>

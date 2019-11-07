@@ -77,32 +77,32 @@ img{
 	width: 200px;
 	margin-top: 25px;
 	height: 200px;
-	margin-left: 50px;
+	margin-left: 70px;
 
 	
 }
 
 #kiri{
-	background: ##2c3e50;
-	height: 710px;
+	background: #95a5a6;
+	height: 1500px;
 	width: 320px;
-	margin-left: -295px;
+	margin-left: -296px;
 	
 }
 #kanan{
 	background: #bdc3c7;
-	height: 1315px;
+	height: 1500px;
 	width: 1175px;
 	margin-left: 25px;
-	margin-top: -713px;
+	margin-top: -1500px;
 }
 
 .menu{
 	color: white;
-	background:#566892;
-	width: 317px;
+	background:#16a085;
+	width: 320px;
 	height: 255px;
-	margin-top: -5px
+	margin-top: -10px
 }
 
 p{
@@ -113,11 +113,10 @@ p{
 }
 
 .header{
-	background: #566892;
+	background: #2ecc71;
 	width: 1155px;
 	height: 25px;
 	color: white;
-	margin-top: 3px;
 	padding: 10px;
 }
 
@@ -133,12 +132,12 @@ p{
 #empat{
 	color: white;
 	font-size: 18px;
-	margin-left: 50px;
+	margin-left: 1050px;
 }
 
 
 #empat:hover{
-	color: red;
+	color: #f1c40f;
 }
 
 
@@ -196,6 +195,13 @@ table td {
   background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
   background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
 }
+
+.add{
+	color:black;
+}
+.add:hover{
+	background:yellow;
+}
 </style>
 
 <body>
@@ -208,13 +214,12 @@ table td {
 		<div class="header">
          	<a id="empat" href="logout.php" class="fas fa-sign-out-alt"> Logout</a>	
 		</div>
-		<div style="padding-top:135px;padding-right:90px;float:right;display:inline-block">
-			
-		Search :
-		<form style="width: 200px; margin-left:75px; margin-top:-30px; height:40px; background: white; color: black; padding-left: 1.3em" id="cari"><input name="filter" type="text" placeholder="Cari Data Disini" <?php if(isset($_GET['filter'])){ echo "value='$_GET[filter]'"; }?> onChange="submit()"></form>
-		</div>
-		<div id="section">
 		
+		<div style="padding-top:135px;padding-right:90px;float:right">
+			Search :   <form style="width: 200px; margin-left:75px; margin-top:-30px; height:40px; background: white; color: black; padding-left: 1.3em" id="cari"><input name="filter" type="text" placeholder="Cari Data Karyawan" <?php if(isset($_GET['filter'])){ echo "value='$_GET[filter]'"; }?> onChange="submit()"></form>
+		</div>
+
+		<div id="section">		
 			<br>
 			<h2 style="margin-left:300px;">DATA KARYAWAN</h2><br><br>
 			<a class="add" style="background-color: #27ae60;color: white;border-radius:3px;margin-left:-500px;padding: 12px; " href="forminput.php">Tambah Data</a><br><br>
@@ -251,8 +256,8 @@ table td {
 					<td><?php echo $hasil['email']; ?></td>
 					<td><?php echo $hasil['no_rekening']; ?></td>
 					<td >
-						<a class="opsi" style="background-color: #2980b9;color:white;border-radius: 3px;padding: 4px 5px;" href="edit.php?id_karyawan=<?php echo $hasil['id_karyawan'] ?>">Ubah</a> 
-						<a style="background-color:#c0392b;color:white;border-radius: 3px;padding:4px;margin-top:20px;" href="hapus.php?id_karyawan=<?php echo $hasil['id_karyawan'] ?>">Hapus</a>
+						<a class="opsi" style="background: #2980b9;color:white;border-radius: 3px;padding: 4px 5px;" href="edit.php?id_karyawan=<?php echo $hasil['id_karyawan'] ?>">Ubah</a> 
+						<a style="background:#c0392b;color:white;border-radius: 3px;padding:4px;margin-top:20px;" href="hapus.php?id_karyawan=<?php echo $hasil['id_karyawan'] ?>">Hapus</a>
 					</td>
 				</tr>
 

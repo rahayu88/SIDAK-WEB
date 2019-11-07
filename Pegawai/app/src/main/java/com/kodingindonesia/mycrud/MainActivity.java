@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.util.HashMap;
 
 /**
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(MainActivity.this,"Menambahkan...","Tunggu...",false,false);
+                loading = ProgressDialog.show(MainActivity.this,"Menambahkan Data Karyawan","Mohon Tunggu...!!!",false,false);
             }
 
             @Override

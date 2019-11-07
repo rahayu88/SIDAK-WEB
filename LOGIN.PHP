@@ -27,7 +27,7 @@
 
 <style type="text/css">
 body{
- background: #2e3339;
+ background: #95a5a6;
  margin-right: 20%;
  margin-left: 20%;
  
@@ -37,7 +37,7 @@ body{
 .login-background{
  
  font-family: arial;
- background: #35455f;
+ background: white;
  padding: 10px;
  box-shadow: 0px 0px 15px #222;
  border-radius: 3px;
@@ -50,19 +50,20 @@ body{
 }
 input[type="text"],input[type="password"]{
   border: none;
- border-bottom: 1px solid #999;
+ border-bottom: 1px solid #bdc3c7;
  margin-bottom: 15px;
- color: #999;
+ color: black;
  width: 100%;
  padding: 15px 0px;
  background: none;
+ padding-left: 1.8em;
 
 }
 
 
 input[type="submit"]{
- background: #0eb7cc;
- color: #fff;
+ background: #2ecc71;
+ color: black;
  border-radius: 3px;
  padding: 15px;
  width: 100%;
@@ -92,8 +93,8 @@ a,a:hover,a:visited,a:active{
 
     <div class="login-body">
         <form action="proseslogin.php" method="post">
-        <input name="username" placeholder="    Username" type="text"></td></tr>
-        <input name="password" placeholder="    Password" type="password"></td></tr>
+        <input name="username" placeholder=" Masukkan Username" type="text"></td></tr>
+        <input name="password" placeholder=" Masukkan Password" type="password"></td></tr>
         <input type="submit" name="login" value="LOGIN"><br>
         </form>    
     </div>  

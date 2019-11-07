@@ -67,7 +67,7 @@ public class TampilPegawai extends AppCompatActivity implements View.OnClickList
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(TampilPegawai.this,"Fetching...","Wait...",false,false);
+                loading = ProgressDialog.show(TampilPegawai.this,"Sedang Mengambil Data","Mohon Tunggu...!!!",false,false);
             }
 
             @Override
@@ -123,7 +123,7 @@ public class TampilPegawai extends AppCompatActivity implements View.OnClickList
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(TampilPegawai.this,"Updating...","Wait...",false,false);
+                loading = ProgressDialog.show(TampilPegawai.this,"Updating Data Karyawan","Mohon Tunggu...!!!",false,false);
             }
 
             @Override
@@ -164,7 +164,7 @@ public class TampilPegawai extends AppCompatActivity implements View.OnClickList
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(TampilPegawai.this, "Updating...", "Tunggu...", false, false);
+                loading = ProgressDialog.show(TampilPegawai.this, "Updating Data Karyawan", "Mohon Tunggu...!!!", false, false);
             }
 
             @Override
@@ -188,7 +188,7 @@ public class TampilPegawai extends AppCompatActivity implements View.OnClickList
 
     private void confirmDeleteEmployee(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Apakah Kamu Yakin Ingin Menghapus Pegawai ini?");
+        alertDialogBuilder.setMessage("Apakah anda Yakin Menghapus karyawan ini?");
 
         alertDialogBuilder.setPositiveButton("Ya",
                 new DialogInterface.OnClickListener() {

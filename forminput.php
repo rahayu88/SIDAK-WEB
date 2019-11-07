@@ -12,8 +12,6 @@
  background: #2e3339;
  margin-right: 20%;
  margin-left: 20%;
-
-
 }
 
 .login-background{
@@ -67,30 +65,31 @@ img{
 	width: 200px;
 	margin-top: 25px;
 	height: 200px;
-	margin-left: 50px;
+	margin-left: 70px;
 
 	
 }
 
 #kiri{
-	background: ##2c3e50;
-	height: 710px;
+	background: #95a5a6;
+	height: 1000px;
 	width: 320px;
-	margin-left: -295px;
+	margin-left: -296px;
+	margin-top: -10px;
 	
 }
 #kanan{
 	background: #bdc3c7;
-	height: 1315px;
-	width: 1175px;
+	height: 1002px;
+	width: 1055px;
 	margin-left: 25px;
-	margin-top: -713px;
+	margin-top: -1005px;
 }
 
 .menu{
 	color: white;
-	background:#566892;
-	width: 317px;
+	background:#16a085;
+	width: 320px;
 	height: 255px;
 	margin-top: -5px
 }
@@ -105,8 +104,8 @@ img{
 }
 
 .header{
-	background: #566892;
-	width: 1155px;
+	background: #27ae60;
+	width: 1035px;
 	height: 25px;
 	color: white;
 	margin-top: 3px;
@@ -125,19 +124,18 @@ img{
 #empat{
 	color: white;
 	font-size: 18px;
-	margin-left: 50px;
+	margin-left: 910px;
 }
 
 
-#empat:hover{
-	color: red;
+#empat:hover, #datakry:hover{
+	color: #f1c40f;
 }
 
 
 #section{
 	text-align: center;
 	margin-top: 20px;
-
 }
 
 
@@ -196,7 +194,7 @@ table td {
   background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
   background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
 }
- 
+
 
 </style>
 
@@ -205,8 +203,8 @@ table td {
 		<div class="menu">
 			<img src="logo.png">
 		</div>
-		
 	</div>
+	
 	<div id="kanan">
 		<div class="header">
          	<a id="empat" href="logout.php" class="fas fa-sign-out-alt"> Logout</a>			
@@ -216,7 +214,7 @@ table td {
 			
 	<form action="" method="post">
 		<table>
-			<a href="index.php" style="background-color: #27ae60;color: #fff;border-radius: 3px;padding: 12px;text-decoration: none;margin-left: -615px;">Data Karyawan</a><br><br><br>
+			<a id="datakry" href="index.php" style="background-color: #27ae60;color: #fff;border-radius: 3px;padding: 12px;text-decoration: none;margin-left: -725px;">Data Karyawan</a><br><br><br>
 		
 		Nama Lengkap :
 		<input style="width: 700px; background: white;color: black;margin-left:5px; padding-left: 1.8em" type="text" name="nama lengkap" placeholder=" Masukkan Nama Lengkap" required>
@@ -232,7 +230,7 @@ table td {
 		<input style="width: 700px;margin-top: 15px;background: white;color: black;margin-left:70px;padding-left: 1.8em" type="text" name="email" placeholder="Masukkan  Email" required>
 		<br>No Rekening :
 		<input style="width: 700px;height: 40px ;margin-top: 20px;background: white;margin-top: 10px;color: black;margin-left:25px;padding-left: 1.8em" type="number" name="no rekening" placeholder=" Masukkan No Rekening" required></td>
-		<input style="width: 700px;height: 40px;margin-top: 20px;background: #2980b9;color: black;margin-left:100px;" type="submit" name="simpan" value="Simpan"></td>
+		<input style="width: 725px;height: 40px;margin-top: 20px;background: #2ecc71;color: black;margin-left:120px;" type="submit" name="simpan" value="Simpan"></td>
 		</table>
 	</form>
 	<?php 
