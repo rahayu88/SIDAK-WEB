@@ -7,28 +7,19 @@
     android:background="@color/putih"
     tools:context=".splash">
 
+
+
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="2000dp"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="-9dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="94dp"
         android:layout_marginTop="150dp"
-        android:src="@drawable/login" />
+        android:src="@drawable/inputdata" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
-        android:gravity="center"
-        android:text="Selamat Datang Di...!!!
-                        Sistem Input Data Karyawan
-                      ( SIDAK )"
-        android:textColor="@color/birumuda"
-        android:textSize="25dp" />
 
 
 </RelativeLayout>

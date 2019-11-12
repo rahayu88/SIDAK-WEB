@@ -17,8 +17,8 @@ public class splash extends AppCompatActivity {
             public void run() {
 
                 //setelah loading maka akan langsung berpindah ke login activity
-                Intent login = new Intent(splash.this, login.class);
-                startActivity(login);
+                Intent info = new Intent(splash.this, Info.class);
+                startActivity(info);
                 finish();
 
             }

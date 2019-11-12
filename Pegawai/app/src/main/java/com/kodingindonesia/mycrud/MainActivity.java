@@ -8,19 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.util.HashMap;
 
-/**
- * Created by muhammadyusuf on 01/19/2017.
- * kodingindonesia
- */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    //variabel
     private EditText editTextName, editTextKTP, editTextJK, editTextNope, editTextEMail, editTextRek, editTextAdd;
 
     private Button buttonAdd;
     private Button buttonView;
+
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextRek = (EditText) findViewById(R.id.edRek);
         editTextAdd = (EditText) findViewById(R.id.edAdd);
 
+        //inisialisasi id button
         buttonAdd = (Button) findViewById(R.id.buttonAdd);
         buttonView = (Button) findViewById(R.id.buttonView);
 
@@ -46,8 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     //Dibawah ini merupakan perintah untuk Menambahkan Pegawai (CREATE)
-    private void addEmployee(){
-
+    private void addEmployee() {
         final String name = editTextName.getText().toString().trim();
         final String ktp = editTextKTP.getText().toString().trim();
         final String jk = editTextJK.getText().toString().trim();
@@ -56,26 +56,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String rek = editTextRek.getText().toString().trim();
         final String add = editTextAdd.getText().toString().trim();
 
-        class AddEmployee extends AsyncTask<Void,Void,String>{
+        class AddEmployee extends AsyncTask<Void, Void, String> {
 
             ProgressDialog loading;
 
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(MainActivity.this,"Menambahkan Data Karyawan","Mohon Tunggu...!!!",false,false);
+                loading = ProgressDialog.show(MainActivity.this, "Menambahkan Data Karyawan", "Mohon Tunggu...!!!", false, false);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
-                Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
             }
 
             @Override
             protected String doInBackground(Void... v) {
-                HashMap<String,String> params = new HashMap<>();
+                HashMap<String, String> params = new HashMap<>();
                 params.put(konfigurasi.TAG_NAMA, name);
                 params.put(konfigurasi.TAG_KTP, ktp);
                 params.put(konfigurasi.TAG_JK, jk);
@@ -103,5 +103,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v == buttonView){
             startActivity(new Intent(this,TampilSemuaPgw.class));
         }
+
+        /*
+        button = (Button) findViewById(R.id.buttonView);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TampilSemuaPgw.class);
+                MainActivity.this.startActivity(intent);
+                MainActivity.this.finish();
+            }
+        });*/
+
     }
 }
+

@@ -13,9 +13,7 @@ tools:context=".MainActivity">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="345dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="15dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,6 +21,7 @@ tools:context=".MainActivity">
             android:text="FORM KARYAWAN"
             android:textColor="@color/hitam"
             android:textSize="18dp"
+            android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_gravity="center"/>
 
@@ -31,12 +30,12 @@ tools:context=".MainActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Lengkap :"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextName" />
+        android:id="@+id/name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,7 +55,7 @@ tools:context=".MainActivity">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edJk" />
+        android:id="@+id/jk" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,7 +64,7 @@ tools:context=".MainActivity">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edHP" />
+        android:id="@+id/nope" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +73,7 @@ tools:context=".MainActivity">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edEmail" />
+        android:id="@+id/email" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +82,7 @@ tools:context=".MainActivity">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edRek" />
+        android:id="@+id/rek" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,27 +91,33 @@ tools:context=".MainActivity">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edAdd" />
+        android:id="@+id/Add" />
 
     <Button
+        android:id="@+id/buttonAdd"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Tambah Karyawan"
-        android:id="@+id/buttonAdd"
-        android:background="@color/birumuda"
+        android:background="@color/orange"
         android:layout_marginTop="20dp"
         android:textColor="@color/putih"
-        android:textSize="15dp"/>
+        android:textSize="14dp"/>
 
     <Button
+        android:id="@+id/buttonView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Data Karyawan"
-        android:id="@+id/buttonView"
-        android:background="@color/birumuda"
+        android:background="@color/orange"
         android:layout_marginTop="10dp"
         android:textColor="@color/putih"
-        android:textSize="15dp"/>
+        android:textSize="14dp"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
 </ScrollView>

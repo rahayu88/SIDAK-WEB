@@ -16,191 +16,30 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
-
+import android.widget.Button;
 
 
 public class login extends AppCompatActivity {
 
-
-
-    //Defining views
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private Context context;
-    private AppCompatButton buttonLogin;
-    private ProgressDialog pDialog;
-
-
+    Button button;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_login);
 
-        context = login.this;
+        button = (Button) findViewById(R.id.btnlogin);
 
 
-
-        //Initializing views
-
-        pDialog = new ProgressDialog(context);
-
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-
-
-
-
-
-        //Adding click listener
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-
             public void onClick(View v) {
-
-                login();
-
+                Intent intent = new Intent(login.this, MainActivity.class);
+                login.this.startActivity(intent);
+                login.this.finish();
             }
-
         });
 
-
     }
-
-
-
-    private void login() {
-
-        //Getting values from edit texts
-
-        final String email = editTextEmail.getText().toString().trim();
-
-        final String password = editTextPassword.getText().toString().trim();
-
-        pDialog.setMessage("Login Process...");
-
-        showDialog();
-
-        //Creating a string request
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppVar.LOGIN_URL,
-
-                new Response.Listener<String>() {
-
-                    @Override
-
-                    public void onResponse(String response) {
-
-
-                        //If we are getting success from server
-
-                        if (response.contains(AppVar.LOGIN_SUCCESS)) {
-
-                            hideDialog();
-
-                            gotoCourseActivity();
-
-
-
-                        } else {
-
-                            hideDialog();
-
-                            //Displaying an error message on toast
-
-                            Toast.makeText(context, "Invalid username or password", Toast.LENGTH_LONG).show();
-
-                        }
-
-                    }
-
-                },
-
-                new Response.ErrorListener() {
-
-                    @Override
-
-                    public void onErrorResponse(VolleyError error) {
-
-                        //You can handle error here if you want
-
-                        hideDialog();
-
-                        Toast.makeText(context, "The server unreachable", Toast.LENGTH_LONG).show();
-
-
-
-                    }
-
-                }) {
-
-            @Override
-
-            protected Map<String, String> getParams() throws AuthFailureError {
-
-                Map<String, String> params = new HashMap<>();
-
-                //Adding parameters to request
-
-                params.put(AppVar.KEY_EMAIL, email);
-
-                params.put(AppVar.KEY_PASSWORD, password);
-
-
-
-                //returning parameter
-
-                return params;
-
-            }
-
-        };
-
-
-
-        //Adding the string request to the queue
-        Volley.newRequestQueue(this).add(stringRequest);
-
-
-    }
-
-
-    private void gotoCourseActivity() {
-
-        Intent intent = new Intent(context, MainActivity.class);
-
-        startActivity(intent);
-
-        finish();
-
-    }
-
-
-
-    private void showDialog() {
-
-        if (!pDialog.isShowing())
-
-            pDialog.show();
-
-    }
-
-
-
-    private void hideDialog() {
-
-        if (pDialog.isShowing())
-
-            pDialog.dismiss();
-
-    }
-
-
-
 }
-

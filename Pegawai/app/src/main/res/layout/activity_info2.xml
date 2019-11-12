@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putih"
+    tools:context=".Info2">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/fitur"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FITUR"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/hitam"/>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sidak dapat menampikan data karyawan, tambah data karyawan, ubah data karyawan, dan hapus data karyawan."
+        android:textSize="18dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/hitam"/>
+
+    <ImageView
+        android:id="@+id/arahkiri"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="450dp"
+        android:src="@drawable/arahkiri"
+        android:layout_marginLeft="70dp"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lewati"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="453dp"/>
+
+
+    <ImageView
+        android:id="@+id/arahkanan"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="450dp"
+        android:src="@drawable/arahkanan"
+        android:layout_marginLeft="250dp"/>
+
+
+
+</RelativeLayout>

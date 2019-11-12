@@ -1,31 +1,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:paddingRight="16dp"
     android:paddingBottom="16dp"
     tools:context="com.kodingindonesia.mycrud.TampilSemuaPgw">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:baselineAligned="false"
+        android:text="DATA KARYAWAN"
+        android:textColor="@color/hitam"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
-
-    <Button
-        android:id="@+id/keluar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="-70dp"
-        android:background="@color/birumuda"
-        android:text="Keluar"
-        android:textSize="18dp"
-        android:textColor="@color/putih"/>
-
+        <Button
+            android:id="@+id/keluar"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-70dp"
+            android:background="@color/orange"
+            android:text="Exit"
+            android:textColor="@color/putih"
+            android:textSize="15dp" />
+    </ListView>
 
 
 </LinearLayout>

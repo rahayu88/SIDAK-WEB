@@ -6,12 +6,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/inputdata"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login"></activity>
-        <activity android:name=".splash" />
+        <activity android:name=".Info2"></activity>
+        <activity android:name=".Info" />
+        <activity
+            android:name=".splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".TampilSemuaPgw" />
         <activity android:name=".ListView" />
         <activity android:name=".TampilPegawai" />

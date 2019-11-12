@@ -13,7 +13,6 @@ import android.widget.SimpleAdapter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -46,10 +45,24 @@ public class TampilSemuaPgw extends AppCompatActivity implements ListView.OnItem
                 JSONObject jo = result.getJSONObject(i);
                 String id = jo.getString(konfigurasi.TAG_ID);
                 String name = jo.getString(konfigurasi.TAG_NAMA);
+                String no_ktp = jo.getString(konfigurasi.TAG_KTP);
+                String jk = jo.getString(konfigurasi.TAG_JK);
+                String nope = jo.getString(konfigurasi.TAG_NOPE);
+                String email = jo.getString(konfigurasi.TAG_EMAIL);
+                String rek = jo.getString(konfigurasi.TAG_REK);
+                String add = jo.getString(konfigurasi.TAG_ADD);
+
 
                 HashMap<String, String> employees = new HashMap<>();
                 employees.put(konfigurasi.TAG_ID, id);
                 employees.put(konfigurasi.TAG_NAMA, name);
+                employees.put(konfigurasi.TAG_KTP, no_ktp);
+                employees.put(konfigurasi.TAG_JK, jk);
+                employees.put(konfigurasi.TAG_NOPE, nope);
+                employees.put(konfigurasi.TAG_EMAIL, email);
+                employees.put(konfigurasi.TAG_REK, rek);
+                employees.put(konfigurasi.TAG_ADD, add);
+
                 list.add(employees);
             }
 
@@ -59,10 +72,9 @@ public class TampilSemuaPgw extends AppCompatActivity implements ListView.OnItem
 
         ListAdapter adapter = new SimpleAdapter(
                 TampilSemuaPgw.this, list, R.layout.list_item,
-                new String[]{konfigurasi.TAG_ID, konfigurasi.TAG_NAMA},
-                new int[]{R.id.id, R.id.name});
-
-        listView.setAdapter(adapter);
+                new String[]{konfigurasi.TAG_ID, konfigurasi.TAG_NAMA, konfigurasi.TAG_KTP, konfigurasi.TAG_JK, konfigurasi.TAG_NOPE, konfigurasi.TAG_EMAIL, konfigurasi.TAG_REK, konfigurasi.TAG_ADD },
+                new int[]{R.id.id, R.id.name, R.id.no_ktp, R.id.edJk, R.id.edHP, R.id.edEmail, R.id.edRek, R.id.edAdd});
+                listView.setAdapter(adapter);
     }
 
     private void getJSON() {

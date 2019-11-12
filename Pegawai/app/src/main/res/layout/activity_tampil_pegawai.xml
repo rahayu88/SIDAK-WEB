@@ -12,13 +12,12 @@
     android:orientation="vertical"
     android:layout_width="345dp"
     android:layout_height="match_parent"
-    android:layout_marginLeft="15dp"
     android:layout_marginTop="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA KARYAWAN"
+        android:text=" UBAH DATA KARYAWAN"
         android:textColor="@color/hitam"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -106,8 +105,8 @@
         android:layout_height="40dp"
         android:text="Update Karyawan"
         android:id="@+id/buttonUpdate"
-        android:background="@color/birumuda"
-        android:textSize="15dp"
+        android:background="@color/orange"
+        android:textSize="14dp"
         android:textColor="@color/putih"
         android:layout_marginTop="15dp"/>
 
@@ -115,9 +114,15 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Hapus Karyawan"
+        android:textSize="14dp"
         android:id="@+id/buttonDelete"
         android:layout_marginTop="10dp"
-        android:background="@color/birumuda"
+        android:background="@color/orange"
         android:textColor="@color/putih"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
 </ScrollView>
